@@ -39,15 +39,15 @@ app.post("/contact", (req, res) => {
       rejectUnauthorized: false, //NOTE: you only need to set rejectUnauthorized to false if you are running on a local server, you can remove it after testing
     },
     auth: {
-      user: "findcollinw@gmail.com",
-      pass: "Ambercollinwisser24910!",
+      user: "GMAIL_USER",
+      pass: "GMAIL_PASS",
     },
   });
 
   // Specify what the email will look like
   const mailOpts = {
     from: `${req.body.email}`, // This is ignored by Gmail
-    to: "wisser24910@gmail.com",
+    to: "GMAIL_SENDTO",
     subject: "New message from contact form at Findcollin.com",
     text: `Name: ${req.body.name}\nFrom: (${req.body.email})\nPhone: ${req.body.phone}\nMessage: ${req.body.message}`,
   };
